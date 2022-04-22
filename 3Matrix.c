@@ -5,23 +5,28 @@ Write a program to read and display 3 x 3 matrix
 #include<stdio.h>
 int main()
 {
-    printf("\n\n3 x 3 Matrix\n");
-    int arr[3][3];
-    printf("Enter the value of the matrix :\n");
+    int i,j,n,m;
+    printf("Program to Read And Display Matrices :\n\n");
 
-    for(int i=0; i<3; i++)
-    {
-        for(int j=0; j<3; j++)
+    printf("Enter The Range Of the Matrix :\n");
+    scanf("%d %d",&n,&m);
+    int arr[n][m];
+
+        printf("\nEnter The Elements Of The First Matrix :\n");
+        for(i=0; i<n; i++)
         {
-            scanf("%d",&arr[i][j]);
+            for(j=0; j<m; j++)
+            {
+                scanf("%d",&arr[i][j]);
+            }
         }
-    }
+
 
     printf("\n\nPrinting the Matrix :\n");
 
-    for(int i=0; i<3; i++)
+    for(int i=0; i<n; i++)
     {
-        for(int j=0; j<3; j++)
+        for(int j=0; j<m; j++)
         {
             printf("%d\t",arr[i][j]);
         }
